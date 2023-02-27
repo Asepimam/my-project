@@ -1,4 +1,5 @@
 module.exports = [
+  'global::my-middlewares',
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
