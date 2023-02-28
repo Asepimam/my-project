@@ -1,15 +1,16 @@
 {
   "collectionName": "components_layout_links",
   "info": {
-    "displayName": "link"
+    "displayName": "link",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "url": {
+    "label": {
       "type": "string",
       "required": true
     },
-    "label": {
+    "url": {
       "type": "string",
       "required": true
     }

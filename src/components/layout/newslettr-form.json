@@ -1,7 +1,8 @@
 {
   "collectionName": "components_layout_newslettr_forms",
   "info": {
-    "displayName": "newslettrForm"
+    "displayName": "newsletterForm",
+    "description": ""
   },
   "options": {},
   "attributes": {

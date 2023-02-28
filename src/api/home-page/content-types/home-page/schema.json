@@ -36,6 +36,21 @@
         "layout.newslettr-form",
         "layout.mission"
       ]
+    },
+    "servicePreview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.service-preview"
+    },
+    "featureCourse": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.feature-course"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.seo-information"
     }
   }
 }

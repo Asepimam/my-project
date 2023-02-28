@@ -36,10 +36,10 @@
         "images"
       ]
     },
-    "authors": {
+    "Author": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     },
     "tags": {
       "type": "relation",
@@ -51,6 +51,18 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"
+    },
+    "premium": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "likeBy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "likes"
     }
   }
 }

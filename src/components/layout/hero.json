@@ -24,18 +24,6 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.link"
-    },
-    "servicePreview": {
-      "displayName": "servicePreview",
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.service-preview"
-    },
-    "featureCourse": {
-      "displayName": "featureCourse",
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.feature-course"
     }
   }
 }

@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "compony_infos",
+  "info": {
+    "singularName": "compony-info",
+    "pluralName": "compony-infos",
+    "displayName": "CommpanyInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "socialLinks": {
+      "displayName": "socialLink",
+      "type": "component",
+      "repeatable": true,
+      "component": "config.social-link"
+    },
+    "commpanyEmail": {
+      "type": "email",
+      "required": true
+    },
+    "commpanyName": {
+      "type": "string",
+      "required": true
+    },
+    "vat": {
+      "type": "string"
+    },
+    "commpanyAddress": {
+      "type": "string"
+    }
+  }
+}
