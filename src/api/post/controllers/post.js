@@ -90,6 +90,9 @@ module.exports = createCoreController('api::post.post', ({ strapi }) =>  ({
      });
      const sanitizedEntity = await this.sanitizeOutput(updatePost, ctx);
      return this.transformResponse(sanitizedEntity);
-    }
+    },
+    // async authorPost(ctx){
+    //   const author = 
+    // }
   }));
 

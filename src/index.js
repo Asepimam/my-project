@@ -16,5 +16,40 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    strapi.db.lifecycles.subscribe({
+      models:["admin::user"],
+      afterCreate:async({result})=>{
+        const {id,firstname,lastname,username,email,createdAt,updatedAt} = result;
+        await strapi.service("api::author.author").create({
+          data:{
+            firstname,
+            lastname,
+            username,
+            email,
+            createdAt,
+            updatedAt,
+            admin_user:[id]
+          },
+        });
+      },
+      afterUpdate:async({result})=>{
+        const correspondingAuthor = (await strapi.service("api::author.author").find({
+          admin_user:[result.id],
+        })
+        
+        ).results[0];
+        const {firstname,lastname,username,email,updatedAt} = result;
+        await strapi.service("api::author.author").update(correspondingAuthor.id,{
+          data:{
+            firstname,
+            lastname,
+            username,
+            email,
+            updatedAt,
+          }
+        })
+      },
+    })
+  },
 };

@@ -70,4 +70,12 @@ module.exports = createCoreService('api::post.post',({ strapi })=>({
         });
         return updatePost;
       },
+      // async authorPosts(args){
+      //   const {authorId,query} = args;
+      //   const authorPosts = await strapi.entityService.findMany("api::post.post",{
+      //     populate:["author"],
+      //   })
+      //   return authorPosts;
+      // }
 }))
+
